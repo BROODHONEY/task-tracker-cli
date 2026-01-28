@@ -121,11 +121,6 @@ else if (command === 'inp') {
 else if (command === 'rem' || command === 'remove') {
     const id = Number(args[1]);
     const index = tasks.tasks.findIndex(t => t.id === id);
-}
-    // Verify task exists
-else if (command === 'rem' || command === 'remove') {
-    const id = Number(args[1]);
-    const index = tasks.tasks.findIndex(t => t.id === id);
     
     if (index === -1) {
         console.log(`Task with ID ${id} not found.`);

@@ -4,6 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to the tasks data file
+
+if(!fs.existsSync(__dirname)){
+    fs.mkdirSync(__dirname);
+}
+
 const DATA_FILE = path.join(__dirname, 'tasks.json');
 
 // Loads tasks from the JSON file, or returns empty structure if file doesn't exist
